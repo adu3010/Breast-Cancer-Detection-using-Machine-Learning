@@ -1,32 +1,39 @@
 Here we use Machine Learning to Detect Breast Cancer
 
 Dataset - https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/data
-Attribute Information:
 
-1) ID number
-2) Diagnosis (M = malignant, B = benign)
-3-32)
+I performed EDA on the dataset to check for null values, outliers
 
-Ten real-valued features are computed for each cell nucleus:
+I have used the following ML Algorithms:
+1. Logistic Regression 
+Accuracy Score:
+Train Accuracy: 0.9868131868131869
+Test Accuracy: 0.9736842105263158
 
-a) radius (mean of distances from center to points on the perimeter)
-b) texture (standard deviation of gray-scale values)
-c) perimeter
-d) area
-e) smoothness (local variation in radius lengths)
-f) compactness (perimeter^2 / area - 1.0)
-g) concavity (severity of concave portions of the contour)
-h) concave points (number of concave portions of the contour)
-i) symmetry
-j) fractal dimension ("coastline approximation" - 1)
+Classification Report (Test):
+              precision    recall  f1-score   support
 
-The mean, standard error and "worst" or largest (mean of the three
-largest values) of these features were computed for each image,
-resulting in 30 features. For instance, field 3 is Mean Radius, field
-13 is Radius SE, field 23 is Worst Radius. 
+           0       0.97      0.99      0.98        71
+           1       0.98      0.95      0.96        43
 
-All feature values are recoded with four significant digits.
+    accuracy                           0.97       114
+   macro avg       0.97      0.97      0.97       114
+weighted avg       0.97      0.97      0.97       114
 
-Missing attribute values: none
 
-Class distribution: 357 benign, 212 malignant
+Confusion Matrix (Test):
+[[70  1]
+ [ 2 41]]
+
+2. Random Forest Classifier
+Accuracy Score:
+Train Accuracy: 0.989010989010989
+Test Accuracy: 0.956140350877193
+
+Recall Score:
+Train Recall: 0.9704142011834319
+Test Recall: 0.9069767441860465
+
+Confusion Matrix (Test):
+[[70  1]
+ [ 4 39]]
